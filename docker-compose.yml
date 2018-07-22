@@ -1,0 +1,12 @@
+version: "3.1"
+services:
+  jenkins:
+    image: jenkins
+    container_name: jenkins
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./data:/var/jenkins_home
